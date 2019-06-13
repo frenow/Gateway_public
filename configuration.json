@@ -1,0 +1,77 @@
+{
+    "ReRoutes": [
+      {
+        "DownstreamPathTemplate": "/api/pedidos",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8083
+          }
+        ],
+        "UpstreamPathTemplate": "/api/pedidos",
+        "UpstreamHttpMethod": [ "Get", "Post" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8083
+          }
+        ],
+        "UpstreamPathTemplate": "/api/pedidos/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/carrinho",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8082
+          }
+        ],
+        "UpstreamPathTemplate": "/api/carrinho",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/carrinho/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8082
+          }
+        ],
+        "UpstreamPathTemplate": "/api/carrinho/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/produtos",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8081
+          }
+        ],
+        "UpstreamPathTemplate": "/api/produtos",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/produtos/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "127.0.0.1",
+            "Port": 8081
+          }
+        ],
+        "UpstreamPathTemplate": "/api/produtos/{everything}",
+        "UpstreamHttpMethod": [ "Get" ]
+      }
+    ],
+    "GlobalConfiguration": { }
+  }
